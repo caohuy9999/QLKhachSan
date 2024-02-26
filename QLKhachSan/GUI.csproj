@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A46FFBA-E8C2-4B10-9E73-3053652262AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLKhachSan</RootNamespace>
+    <AssemblyName>QLKhachSan</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fHelper\fBieuDo\fBieuDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\fBieuDo\fBieuDo.Designer.cs">
+      <DependentUpon>fBieuDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\fDichVu\fAddDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\fDichVu\fAddDichVu.Designer.cs">
+      <DependentUpon>fAddDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\fDichVu\fAddNameLoaiDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\fDichVu\fAddNameLoaiDichVu.Designer.cs">
+      <DependentUpon>fAddNameLoaiDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\fHoaDon\fChitiethoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\fHoaDon\fChitiethoadon.Designer.cs">
+      <DependentUpon>fChitiethoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\fHoaDon\fLichSuHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\fHoaDon\fLichSuHoaDon.Designer.cs">
+      <DependentUpon>fLichSuHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\fKhachHang\fKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\fKhachHang\fKhachHang.Designer.cs">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\fLoaiPhongAndTienNghi\fAddTypeRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\fLoaiPhongAndTienNghi\fAddTypeRoom.Designer.cs">
+      <DependentUpon>fAddTypeRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\fTienNghi\fTienNghi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\fTienNghi\fTienNghi.Designer.cs">
+      <DependentUpon>fTienNghi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\Phong\fBookPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\Phong\fBookPhong.Designer.cs">
+      <DependentUpon>fBookPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\fChiTietLuuTru\fChiTietLuuTru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\fChiTietLuuTru\fChiTietLuuTru.Designer.cs">
+      <DependentUpon>fChiTietLuuTru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\Phong\fDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\Phong\fDatPhong.Designer.cs">
+      <DependentUpon>fDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\fLogin\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\fLogin\fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\fLoaiPhongAndTienNghi\fPhongByLoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\fLoaiPhongAndTienNghi\fPhongByLoaiPhong.Designer.cs">
+      <DependentUpon>fPhongByLoaiPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\TienIchPhong\fScriptTienIchPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\TienIchPhong\fScriptTienIchPhong.Designer.cs">
+      <DependentUpon>fScriptTienIchPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\TienIchPhong\fTienIchPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\TienIchPhong\fTienIchPhong.Designer.cs">
+      <DependentUpon>fTienIchPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMain.Designer.cs">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\fDichVu\fQuanLyDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\fDichVu\fQuanLyDichVu.Designer.cs">
+      <DependentUpon>fQuanLyDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\fHoaDon\fXuatHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\fHoaDon\fXuatHoaDon.Designer.cs">
+      <DependentUpon>fXuatHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHelper\Phong\ItemSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fHelper\Phong\ItemSP.designer.cs">
+      <DependentUpon>ItemSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="fHelper\fQLUser\QlUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHelper\fQLUser\QlUser.Designer.cs">
+      <DependentUpon>QlUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLQLKhachSanDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SQLQLKhachSanDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fHelper\fBieuDo\fBieuDo.resx">
+      <DependentUpon>fBieuDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\fDichVu\fAddDichVu.resx">
+      <DependentUpon>fAddDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\fDichVu\fAddNameLoaiDichVu.resx">
+      <DependentUpon>fAddNameLoaiDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\fHoaDon\fChitiethoadon.resx">
+      <DependentUpon>fChitiethoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\fHoaDon\fLichSuHoaDon.resx">
+      <DependentUpon>fLichSuHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\fKhachHang\fKhachHang.resx">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\fLoaiPhongAndTienNghi\fAddTypeRoom.resx">
+      <DependentUpon>fAddTypeRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\fTienNghi\fTienNghi.resx">
+      <DependentUpon>fTienNghi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\Phong\fBookPhong.resx">
+      <DependentUpon>fBookPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\fChiTietLuuTru\fChiTietLuuTru.resx">
+      <DependentUpon>fChiTietLuuTru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\Phong\fDatPhong.resx">
+      <DependentUpon>fDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\fLogin\fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\fLoaiPhongAndTienNghi\fPhongByLoaiPhong.resx">
+      <DependentUpon>fPhongByLoaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\TienIchPhong\fScriptTienIchPhong.resx">
+      <DependentUpon>fScriptTienIchPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\TienIchPhong\fTienIchPhong.resx">
+      <DependentUpon>fTienIchPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMain.resx">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\fDichVu\fQuanLyDichVu.resx">
+      <DependentUpon>fQuanLyDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\fHoaDon\fXuatHoaDon.resx">
+      <DependentUpon>fXuatHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHelper\Phong\ItemSP.resx">
+      <DependentUpon>ItemSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fHelper\fQLUser\QlUser.resx">
+      <DependentUpon>QlUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SQLQLKhachSanDataSet.xsc">
+      <DependentUpon>SQLQLKhachSanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SQLQLKhachSanDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SQLQLKhachSanDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQLQLKhachSanDataSet.xss">
+      <DependentUpon>SQLQLKhachSanDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{26af6c2c-9846-450e-af44-8ff340b94ad3}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{D5BA58A7-E9D5-4484-ABBD-6C8746B7278D}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
